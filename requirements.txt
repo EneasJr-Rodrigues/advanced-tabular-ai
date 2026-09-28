@@ -1,0 +1,11 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.0.1+cpu
+numpy<2.0.0
+pandas
+scikit-learn
+fastapi
+uvicorn
+pydantic
+streamlit
+requests
+plotly

@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: tabular_api
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    networks:
+      - tabular_network
+
+  dashboard:
+    build: .
+    container_name: tabular_dashboard
+    command: streamlit run dashboard.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    networks:
+      - tabular_network
+    environment:
+      # Diz ao Streamlit para buscar a API pelo nome do contêiner na rede interna
+      - API_URL=http://api:8000/predict
+
+networks:
+  tabular_network:
+    driver: bridge
