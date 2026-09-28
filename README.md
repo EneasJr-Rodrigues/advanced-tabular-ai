@@ -31,7 +31,7 @@ O ambiente foi isolado utilizando infraestrutura imutável via Docker, eliminand
 ### Passo a Passo
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SEU-USUARIO/advanced-tabular-ai.git](https://github.com/SEU-USUARIO/advanced-tabular-ai.git)
+   git clone https://github.com/EneasJr-Rodrigues/advanced-tabular-ai.git
    cd advanced-tabular-ai
     ```
 

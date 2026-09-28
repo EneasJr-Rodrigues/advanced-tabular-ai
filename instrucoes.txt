@@ -1,1 +1,10 @@
 source /Users/eneas-rodrigues/Documents/data/advanced-tabular-ai/venv/bin/activate
+
+# 1. Conecta a sua pasta local ao repositório na nuvem
+git remote add origin https://github.com/EneasJr-Rodrigues/advanced-tabular-ai.git
+
+# 2. Renomeia a branch de 'master' para 'main' (o padrão moderno e exigido por muitas plataformas)
+git branch -M main
+
+# 3. Envia os arquivos e cria o vínculo definitivo
+git push -u origin main
